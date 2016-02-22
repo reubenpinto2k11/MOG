@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dccper.mog" >
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Splash"
+            android:label="Museum of Goa"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UserInfo"
+            android:label="User Info" />
+        <activity
+            android:name=".HomePage"
+            android:label="Homepage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AnyOrientationCapture"
+            android:screenOrientation="fullSensor"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Installation"
+            android:label="@string/title_activity_installation"
+            android:launchMode="singleTop"
+            android:parentActivityName=".HomePage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dccper.mog.HomePage" />
+        </activity>
+        <service android:name=".MusicService"/>
+        <activity
+            android:name=".MuseumLayoutActivity"
+            android:label="@string/title_activity_museum_layout" >
+        </activity>
+        <activity
+            android:name=".ArtistList"
+            android:label="About the Artists" />
+        <activity
+            android:name=".ArtistDetailActivity"
+            android:label="Artist Details" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".ArtistList"/>
+            </activity>
+        <activity
+            android:name=".ContactUs"
+            android:label="Contact Us" />
+        <activity
+            android:name=".ImageExpandActivity"
+            android:label="@string/title_activity_image_expand" >
+        </activity>
+    </application>
+
+</manifest>

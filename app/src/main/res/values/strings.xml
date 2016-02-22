@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Museum of Goa</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash">Splash</string>
+    <string name="title_activity_userinfo">User Info</string>
+    <string name="title_activity_home_page">Homepage</string>
+    <string name="title_activity_museum_layout">Museum Layout</string>
+    <string name="title_activity_about_the_artists">About the Artists</string>
+    <string name="title_activity_upcoming_events">Upcoming Events</string>
+    <string name="title_activity_bookmarks">Bookmarks</string>
+    <string name="title_activity_contact_us">Contact Us</string>
+    <string name="open_drawer">Open Nav Drawer</string>
+    <string name="close_drawer">Close Nav Drawer</string>
+    <string name="title_activity_installation">Installation</string>
+    <string name="title_activity_image_expand">ImageExpandActivity</string>
+    <string name="menu_item_bookmark">Bookmark</string>
+
+</resources>

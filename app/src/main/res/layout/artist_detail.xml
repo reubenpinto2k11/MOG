@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#84FFFF"
+    >
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/tool_bar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        xmlns:android="http://schemas.android.com/apk/res/android" >
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/artist_det_image"
+                android:layout_width="180dp"
+                android:layout_height="210dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/stub"
+                android:layout_margin="10dp"
+                />
+            <TextView
+                android:id="@+id/artist_det_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="John Doe"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"/>
+            <TextView
+                android:id="@+id/artist_det_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Sample Text......................."
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Featured Art:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                />
+            <TextView
+                android:id="@+id/artist_detail_feat_art"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:maxLines="3"
+                android:text="sample1,sample2,sample3"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

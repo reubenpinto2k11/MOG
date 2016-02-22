@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="30dp"
+    tools:context=".UserInfo">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="User Information"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Please fill out the following to proceed"
+        android:textSize="16sp"
+        android:padding="10dp"
+        />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <EditText
+        android:id="@+id/user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:padding="10dp"
+        android:layout_margin="20dp"
+        android:inputType="text"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <EditText
+        android:id="@+id/user_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:padding="10dp"
+        android:layout_margin="20dp"
+        android:inputType="textEmailAddress"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <EditText
+        android:id="@+id/user_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone"
+        android:padding="10dp"
+        android:layout_margin="20dp"
+        android:inputType="phone"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Continue"
+        android:textAllCaps="true"
+        android:textSize="20sp"/>
+        <!--android:background="@drawable/greensquare_9_patch"-->
+
+</LinearLayout>

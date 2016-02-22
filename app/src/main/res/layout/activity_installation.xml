@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:id="@+id/player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:orientation="vertical"
+        android:background="#757575"
+        android:layout_below="@id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="3dp">
+
+            <TextView
+                android:id="@+id/song_title"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Sample.mp3"
+                android:textSize="18sp"
+                android:singleLine="true"
+
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true">
+
+                <Button
+                    android:id="@+id/play_pause"
+                    android:layout_width="65px"
+                    android:layout_height="65px"
+                    android:elevation="0dp"
+                    android:background="@drawable/ic_pause"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <Button
+                    android:id="@+id/lang"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/lang"
+                    android:layout_margin="5dp"
+                    android:elevation="0dp"
+                    android:layout_gravity="center_vertical"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout  android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--<ToggleButton-->
+            <!--android:id="@+id/play_pause"-->
+            <!--android:layout_width="90px"-->
+            <!--android:layout_height="90px"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:elevation="0dp"-->
+            <!--android:autoText="false"-->
+            <!--android:background="@drawable/ic_play_pause"/>-->
+
+            <TextView
+                android:id="@+id/currpos"
+                android:text="00:00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/dur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:layout_margin="3dp"
+                android:padding="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+            <SeekBar
+                android:id="@+id/seek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="3dp"
+                android:layout_toRightOf="@id/currpos"
+                android:layout_toLeftOf="@id/dur"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="#E3F2FD"
+        android:layout_below="@id/player">
+        <!--android:layout_below="@id/player">-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/instal_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                >
+
+                <android.support.v4.view.ViewPager
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/viewpager_inst"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="#bdbdbd"
+                    />
+
+                <com.viewpagerindicator.CirclePageIndicator
+                    android:id="@+id/indicator_inst"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="bottom"
+                    />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/instal_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Installation Name"
+                android:layout_below="@id/instal_img"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                />
+
+            <TextView
+                android:id="@+id/artist_name1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="by Pablo Picasso"
+                android:layout_below="@id/instal_title"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/instal_det"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:text="The Starry Night is an oil on canvas by the Dutch post-impressionist painter Vincent van Gogh. Painted in June, 1889, it depicts the view from the east-facing window of his asylum room at Saint-Rémy-de-Provence, just before sunrise, with the addition of an idealized village. It has been in the permanent collection of the Museum of Modern Art in New York City since 1941, acquired through the Lillie P. Bliss Bequest. It is regarded as among Van Gogh's finest works, and is one of the most recognized paintings in the history of Western culture."
+                android:lineSpacingMultiplier="1.5"
+                android:layout_below="@id/artist_name1"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
